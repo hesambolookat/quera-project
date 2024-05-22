@@ -9,19 +9,19 @@
 </head>
 <body class="body  m-0 p-0 box-border ">
     <header class="header shadow-md ">
-        <nav class="header__nav px-20 flex justify-between mt-[2vh]">
-            <div class="header__nav-list flex justify-center text-center mt-[1.25vh]">
-                <a href="#" class="font-bold ml-20 hover:text-[#2C7EF8] text-[20px]">کوئرا لیست</a>
-                <a href="#" class="ml-20 text-[#666666]  hover:text-[#2C7EF8] text-[16px]">صفحه اصلی</a>
-                <a href="#" class="ml-20 text-[#666666]  hover:text-[#2C7EF8] text-[16px]" >درباره ما</a>
-                <a href="#" class="ml-20 text-[#666666] hover:text-[#2C7EF8] text-[16px]">ارتباط با ما</a>
+      <nav class="header__nav md:px-20 flex justify-between  items-center md:mt-[2vh]">
+        <div class="header__nav-list flex  justify-between text-center mt-[1.25vh]">
+            <img class="md:invisible visible " src="./asset/menu.png "alt="menu">
+            <a href="#" class="font-semibold   md:ml-20 md:hover:text-[#2C7EF8] md:text-[20px]">کوئرا لیست</a>            <a href="#" class="md:visible invisible md:ml-20 md:text-[#666666]  md:hover:text-[#2C7EF8] md:text-[16px]">صفحه اصلی</a>
+            <a href="#" class="md:visible invisible md:ml-20 md:text-[#666666]  md:hover:text-[#2C7EF8] md:text-[16px]" >درباره ما</a>
+            <a href="#" class="md:visible invisible md:ml-20 md:text-[#666666] md:hover:text-[#2C7EF8] md:text-[16px]">ارتباط با ما</a>
 
 
-            </div>
-            <div class="header__nav-btn flex items-center justify-center mb-[2vh] ">
-                <a type="button" class="ml-[2vh]   border-x-[30px] border-y-[8px] border-solid text-white border-[#2C7EF8] bg-[#2C7EF8] text-center rounded-lg">ورود به اپلیکیشن</button>
-                <a href=""><img alt="دارک مد" src="./asset/Frame 1000005337.png"></a>
-            </div>
+        </div>
+        <div class="header__nav-btn invisible md:visible md:flex md:items-center md:ustify-center md:mb-[2vh] ">
+            <a type="button" class=" md:ml-[2vh]   md:border-x-[30px] md:border-y-[8px] md:border-solid md:text-white md:border-[#2C7EF8] bg-[#2C7EF8] text-center rounded-lg">ورود به اپلیکیشن</button>
+            <a href=""><img alt="دارک مد" src="./asset/Frame 1000005337.png"></a>
+        </div>
         </nav>
        <div class="header__img bg-gradient-to-b from-[#EBF3FF] to-[#fFFFFF]" >
             <div class="header__img-title flex flex-col justify-center text-center items-center">
@@ -34,13 +34,13 @@
                     با اپلیکیشن کوئرا لیست، زمان خود را با هدف و برنامه‌ریزی موثر سپری کنید.</p>
                 <img src="./asset/Star 2 (Stroke).png" width="30px" alt="Star">
                 <img src="./asset/Ellipse 128.png" width="300px" calss="m-5" alt="elips">
-                <div class="flex justify-center">
-                <button type="button" class="border-x-[30px] border-y-[8px] border-solid text-white border-[#2C7EF8] bg-[#2C7EF8] text-center rounded-lg">ورود به اپلیکیشن</button>
-                <button type="button" class="border-solid border-x-[30px] border-y-[8px] border-[#EBF3FE] bg-[#EBF3FE] text-center rounded-lg">درباره ما</button>
+                <div class="flex justify-between items-center w-[328px]  text-center">
+                <button type="button" class="w-[50%] border-y-[15px] md:w-[50%] md:border-y-[8px] border-solid text-white border-[#2C7EF8] bg-[#2C7EF8] text-center rounded-lg">ورود به اپلیکیشن</button>
+                <button type="button" class="w-[50%] border-y-[15px] md:w-[50%] md:border-y-[8px]  text-[#2C7EF8] border-[#EBF3FE] bg-[#EBF3FE] text-center rounded-lg">درباره ما</button>
                 </div>
                 
             </div> 
-            <div class="header__img px-24 ">
+            <div class="header__img md:px-60 ">
                 <img src="./asset/image 39129.png" alt="اپلیکیشن پندو">
 
             </div>       
@@ -56,47 +56,51 @@
                     تا بهترین تجربه کاربری رو براتون به ارمغان بیاریم. 
                 </p> 
              </div>
-             <div class="main__feature-list flex justify-center py-[32px] px-[40px] gap-[24px] mt-[50px]">
-                    <div class="w-[262px] h-[262px] rounded-[24px] border-[1px] flex flex-col justify-center items-center text-center " >
+             <div class="grid grid-cols-2 grid-rows-2 mr-4  main__feature-list md:flex justify-center gap-6  mt-16">
+                    <div class="w-[262px] h-[266px] gap-6  rounded-[24px] border-[1px] flex flex-col justify-center items-center text-center " >
                         <img class="mt-[5vh]" src="./asset/Frame 427321293.png" alt="رابط کاربری جذاب">
-                        <h5 class=" leading-[36px] text-[20px] font-extrabold text-center ">رابط کاربری جذاب</h5>
-                        <p class="leading-[30px] text-[14px] font-normal text-center">اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!</p>
+                        <h5 class="font-semibold text-[20px] text-center ">رابط کاربری جذاب</h5>
+                        <p class="mb-5 w-[196px] h-[90px] text-[14px] font-normal text-center text-[#444749]">اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!</p>
                     </div>
-                    <div class="w-[262px] h-[262px] rounded-[24px] border-[1px] flex flex-col justify-center items-center text-center " >
+                    <div class="w-[262px] h-[266px] gap-6  rounded-[24px] border-[1px] flex flex-col justify-center items-center text-center  " >
                         <img class="mt-[5vh]" src="./asset/33.png" alt="قابلیت دسته بندی کارها">
-                        <h5 class=" leading-[36px] text-[20px] font-extrabold text-center ">قابلیت دسته بندی کارها</h5>
-                        <p class="leading-[30px] text-[14px] font-normal text-center">اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!</p>
+                        <h5 class="font-semibold text-[20px] text-center">قابلیت دسته بندی کارها</h5>
+                        <p class="mb-5 w-[196px] h-[90px] text-[14px] font-normal text-center text-[#444749]">اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!</p>
                     </div>
-                    <div class="w-[262px] h-[262px] rounded-[24px] border-[1px] flex flex-col justify-center items-center text-center " >
+                    <div class="w-[262px] h-[266px] gap-6  rounded-[24px] border-[1px] flex flex-col justify-center items-center text-center " >
                         <img class="mt-[5vh]" src="./asset/Frame 4273212923.png" alt="دسترسی آسان">
-                        <h5 class=" leading-[36px] text-[20px] font-extrabold text-center ">دسترسی آسان</h5>
-                        <p class="leading-[30px] text-[14px] font-normal text-center">اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!</p>
+                        <h5 class="font-semibold text-[20px] text-center">دسترسی آسان</h5>
+                        <p class="mb-5 w-[196px] h-[90px] text-[14px] font-normal text-center text-[#444749]">اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!</p>
                     </div>
-                    <div class="w-[262px] h-[262px] rounded-[24px] border-[1px] flex flex-col justify-center items-center text-center " >
+                    <div class="w-[262px] h-[266px] gap-6  rounded-[24px] border-[1px] flex flex-col justify-center items-center text-center " >
                         <img class="mt-[5vh]" src="./asset/Frame 427321293 (1).png" alt="پشتیبانی آنلاین">
-                        <h5 class=" leading-[36px] text-[20px] font-extrabold text-center ">پشتیبانی آنلاین</h5>
-                        <p class="leading-[30px] text-[14px] font-normal text-center">اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!</p>
+                        <h5 class="font-semibold text-[20px] text-center">پشتیبانی آنلاین</h5>
+                        <p class="mb-5 w-[196px] h-[90px] text-[14px] font-normal text-center text-[#444749]">اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!</p>
                     </div>
              </div>            
         </div>
-             <div class="main__download flex px-24 mt-[10vh]">
-                <div class="main__download-text w-[50%]">
+             <div class="main__download  md:flex md:justify-center md:items-center mt-[10vh]">
+                <div class="main__download-text ">
+                  <div class="flex flex-col justify-center items-center">
                     <h5 class="text-[18px] leading-[30px] text-right font-normal">اپلیکیشن اندروید و IOS</h5>
                     <h2 class="text-[40px] leading-[72px] text-right font-semibold">دانلود اپلیکیشن</h2>
-                    <p class="text-[18px] leading-[30px] text-right font-normal w-[472px] h-[180px]">کاربران اندروید میتوانند اپلیکیشن کوئرالیست را از استورهای 
+                    <img src="./asset/Put screen in here.png" alt="app" class="md:invisible">
+                    
+                    <p class="text-[18px] leading-[30px] text-right font-normal md:w-[472px] md:h-[180px]">کاربران اندروید میتوانند اپلیکیشن کوئرالیست را از استورهای 
                         معتبر اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر
                         دانلود نرم‌افزار از اپل‌استور میتوانند از نسخه مبتنی بر وب آن استفاده نمایند.
                         همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور میتوانند از نسخه
                         مبتنی بر وب آن استفاده نمایند. 
                     </p>
-                    <a href="#" class="h-[52px] w-[198px] gap-[16px] text-[18px] leading-[27.9px] font-semibold text-[#2C7EF8]"> ورود به اپلیکیشن </a>
-                </div>
-                <div class="main__download-img w-[50%]">
-                    <img src="./asset/Group 47490.png" alt="دانلود اپلیکیشن">
-                </div>
+                    <a href="#"> <img src="./asset/Frame 427321260.png"  alt="open"> </a>
+                    </div>
+                    <div class="main__download-img">
+                    <img src="./asset/Group 47490.png" class="invisible md:visible" alt="دانلود اپلیکیشن">
+                    </div>
+                  </div>
 
              </div> 
-             <div class="main_comment ">
+             <div class="main_comment flex flex-col items-center justify-center ">
                 <div class="main_comment_text flex flex-col justify-center items-center mt-[20vh]">
                     <h4 class="font-semibold text-[40px] leading-[72px] text-right ">نظرات کاربران</h4>
                     <p class="font-normal text-[18px] leading-[30px] text-center">بیش از یک دهه است که کوئرالیست به مردم در سراسر جهان کمک
@@ -104,8 +108,8 @@
                     </p>
                 </div>
             <div class="main__comment-list flex mt-[50px] ">
-                <div class="flex-col w-[357px] h-[604px] justify-center items-center">
-                    <div class="w-[357px] h-[340px] rounded-[24px] border-[1px] mt-[25px] ">
+                <div class="flex flex-col justify-center items-center">
+                    <div class="w-[258] h-[272] rounded-2xl gap-2 p-6 md:w-[357px] md:h-[340px] md:rounded-[24px] md:border-[1px] md:mt-[25px] ">
                         <div class="flex items-center mt-[25px] mr-[30px] mb-[20px]" > 
                                 <img class="ml-[30px] " src="./asset/Ellipse 135.png" alt="عکس کاربر">
                             <div class="flex-col ">
@@ -115,9 +119,9 @@
                         </div>
                         <p class=" text-[16px] font-light leading-[24.8px] text-right text-[#5C5C5C]">تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از دنیایی اومدم که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این امکان رو می‌دهد که باهوش‌تر، سریع‌تر و سازمان دهی شده تر زندگی کنیم و هم چینین همه چیز به گونه‌ای ساده تنظیم شده و میتونیم از یکپارچگی اطلاعات و دیتاها لذت ببریم.</p>
                     </div>
-                    <div class="  rounded-[24px] border-[1px] mt-[25px] overflow-hidden">
+                    <div class=" w-[357px] h-[240px] rounded-[24px] border-[1px] mt-[25px] overflow-hidden">
                         <div class="flex items-center mt-[25px] mr-[30px] mb-[20px]" > 
-                                 <img class="ml-[30px] " src="./asset/Ellipse 135.png" alt="عکس کاربر">
+                                 <img class="ml-[30px] " src="./asset/Ellipse 136.jpg" alt="عکس کاربر">
                             <div class="flex-col ">
                                 <h3 class="text-[15px] font-semibold leading-[27px] text-right">رویا ملکی</h3>
                                 <h4 class="text-[14px] font-normal leading-[21.7px] text-right text-[#5C5C5C]">مهندس نرم افزار دیجی کالا</h4>
@@ -128,9 +132,9 @@
                 </div>
 
                 <div class="flex flex-col justify-center items-center  ">
-                    <div class="  rounded-[24px] border-[1px] mt-[25px] overflow-hidden">
+                    <div class="w-[357px] h-[240px]  rounded-[24px] border-[1px] mt-[25px] overflow-hidden">
                         <div class="flex items-center mt-[25px] mb-[20px]" > 
-                                 <img class="ml-[30px] " src="./asset/Ellipse 135.png" alt="عکس کاربر">
+                                 <img class="ml-[30px]" src="./asset/Ellipse 136.png" alt="عکس کاربر">
                             <div class="flex-col ">
                                 <h3 class="text-[15px] font-semibold leading-[27px] text-right">رویا ملکی</h3>
                                  <h4 class="text-[14px] font-normal leading-[21.7px] text-right text-[#5C5C5C]">مهندس نرم افزار دیجی کالا</h4>
@@ -140,7 +144,7 @@
                     </div>
                     <div class="w-[357px] h-[340px] rounded-[24px] border-[1px] mt-[25px] ">
                         <div class="flex items-center mt-[25px] mr-[30px] mb-[20px]" > 
-                                <img class="ml-[30px] " src="./asset/Ellipse 135.png" alt="عکس کاربر">
+                                <img class="ml-[30px] " src="./asset/4.png" alt="عکس کاربر">
                             <div class="flex-col ">
                                 <h3 class="text-[15px] font-semibold leading-[27px] text-right">رویا ملکی</h3>
                                 <h4 class="text-[14px] font-normal leading-[21.7px] text-right text-[#5C5C5C]">مهندس نرم افزار دیجی کالا</h4>
@@ -152,7 +156,7 @@
                 <div class="flex-col w-[357px] h-[604px] justify-center items-center mr-[30px]">
                     <div class="w-[357px] h-[340px] rounded-[24px] border-[1px] mt-[25px] ">
                         <div class="flex items-center mt-[25px] mr-[30px] mb-[20px]" > 
-                            <img class="ml-[30px] " src="./asset/Ellipse 135.png" alt="عکس کاربر">
+                            <img class="ml-[30px] " src="./asset/Ellipse 135 (1).png" alt="عکس کاربر">
                             <div class="flex-col ">
                                 <h3 class="text-[15px] font-semibold leading-[27px] text-right">رویا ملکی</h3>
                                 <h4 class="text-[14px] font-normal leading-[21.7px] text-right text-[#5C5C5C]">مهندس نرم افزار دیجی کالا</h4>
@@ -162,7 +166,7 @@
                     </div>
                     <div class=" w-[357px] h-[240px] rounded-[24px] border-[1px] mt-[25px] overflow-hidden">
                         <div class="flex items-center mt-[25px] mr-[30px] mb-[20px]" > 
-                            <img class="ml-[30px] " src="./asset/Ellipse 135.png" alt="عکس کاربر">
+                            <img class="ml-[30px] " src="./asset/6.png" alt="عکس کاربر">
                             <div class="flex-col ">
                                <h3 class="text-[15px] font-semibold leading-[27px] text-right">رویا ملکی</h3>
                                 <h4 class="text-[14px] font-normal leading-[21.7px] text-right text-[#5C5C5C]">مهندس نرم افزار دیجی کالا</h4>
