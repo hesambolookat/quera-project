@@ -54,13 +54,12 @@ document.getElementById('addTaskButton').addEventListener('click', function() {
                     <p>${toDoDescription}</p> 
                 </div>
                 <button class="toggleOptionsButton">
-                    <img src="./assets/Frame 1000005552.png" class="w-1 h-4" alt="option" />
+                    <img src="./asset/Frame 1000005552.png" class="w-1 h-4" alt="option" />
                 </button>
                 <div class="actions hidden absolute left-6 top-1">
                     <div class="flex border rounded-lg gap-2 p-2">
-                        <span><img class="closeOptionButton" src="./assets/Frame 12161.png" alt="cancel" /></span>
-                        <span><img src="./assets/trash.png" class="removeButton" alt="trash" /></span>
-                        <span><img class="editButton" src="./assets/tabler_edit.png" alt="edit" /></span>
+                        <span><img src="./asset/trash.png" class="removeButton" alt="trash" /></span>
+                        <span><img class="editButton" src="./asset/tabler_edit.png" alt="edit" /></span>
                     </div>
                 </div>
             </div>
@@ -141,14 +140,3 @@ document.getElementById('addTaskButton').addEventListener('click', function() {
     document.querySelectorAll('.importanceButton').forEach(btn => btn.style.backgroundColor = '');
 });
 
-document.getElementById('lightModeButton').addEventListener('click', function() {
-    document.documentElement.classList.remove('dark');
-    document.body.classList.remove('bg-gray-800');
-    document.body.classList.add('bg-white');
-});
-
-document.getElementById('darkModeButton').addEventListener('click', function() {
-    document.documentElement.classList.add('dark');
-    document.body.classList.remove('bg-white');
-    document.body.classList.add('bg-gray-800');
-});
