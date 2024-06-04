@@ -4,7 +4,66 @@
 }
 .body{
     font-family: Yekan;
+    direction: rtl;
+    text-align: right;
 }
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    overflow-x: hidden;
+    transition: 0.3s;
+  }
+  
+  .sidebar a {
+    transition: 0.3s;
+  }
+
+  
+  #main {
+    transition: margin-left 0.3s;
+    padding: 16px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+
+  
+ul{
+  direction: rtl;
+  text-align: right;
+}
+.high {
+  direction: rtl;
+  border-right: 5px solid red;
+  list-style-type: none;
+}
+
+.medium {
+  direction: rtl;
+  border-right: 5px solid yellow;
+  list-style-type: none;
+}
+
+.low {
+  direction: rtl;
+  border-right: 5px solid green;
+  list-style-type: none;
+}
+
+.hidden {
+  display: none;
+  list-style-type: none;
+}
+
 
 /* .footer::before {
     content: "";
