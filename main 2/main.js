@@ -1,3 +1,13 @@
+const dateTimeDisplay = document.getElementById('date-time');
+
+    function updateDateTime() {
+        const now = new Date();
+        dateTimeDisplay.textContent = now.toLocaleString('fa-IR');
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+    
 function toggleSidebar() {
     let sidebar = document.getElementById("sidebar");
     let main = document.getElementById("main");
@@ -8,7 +18,17 @@ function toggleSidebar() {
         sidebar.style.right = "-250px";
     }
 }
-document.getElementById("addTask").addEventListener("click", function() {
+
+document.getElementById("tagButton").addEventListener("click", function() {
+    var tagMenu = document.getElementById("tagMenu");
+    if (tagMenu.style.display === "none") {
+      tagMenu.style.display = "block";
+    } else {
+      tagMenu.style.display = "none";
+    }
+  });
+
+document.getElementById("add-task-button").addEventListener("click", function() {
     document.getElementById("popUpForm").classList.remove("hidden");
 });
 
@@ -29,6 +49,7 @@ document.querySelectorAll('.importanceButton').forEach(button => {
 
 document.getElementById('addTaskButton').addEventListener('click', function() {
     const toDoTitleInput = document.getElementById('toDoTitleInput');
+    const resultDiv = document.getElementById("result");
     const toDoDescriptionInput = document.getElementById('toDoDescriptionInput');
     const toDoTitle = toDoTitleInput.value;
     const toDoDescription = toDoDescriptionInput.value;
@@ -44,14 +65,15 @@ document.getElementById('addTaskButton').addEventListener('click', function() {
     }
 
     const newListItem = document.createElement('li');
-    newListItem.className = selectedImportance;
+    newListItem.className = `flex border-2 w-full rounded-md p-2 ${selectedImportance}`;
+
     newListItem.innerHTML = `
-        <div dir="rtl" class="flex flex-col p-2 w-full relative">
+        <div class="flex flex-col p-2 w-full relative">
             <div class="flex justify-between items-center">
                 <div class="flex gap-2">
                     <input type="checkbox" class="completionCheckbox" />
                     <strong>${toDoTitle}</strong>
-                    <p>${toDoDescription}</p> 
+                    <div id="result"></div>
                 </div>
                 <button class="toggleOptionsButton">
                     <img src="./asset/Frame 1000005552.png" class="w-1 h-4" alt="option" />
@@ -63,6 +85,8 @@ document.getElementById('addTaskButton').addEventListener('click', function() {
                     </div>
                 </div>
             </div>
+            <p>${toDoDescription}</p> 
+
         </div>
     `;
 
@@ -90,14 +114,15 @@ document.getElementById('addTaskButton').addEventListener('click', function() {
     });
 
     newListItem.querySelector('.editButton').addEventListener('click', function() {
-        const textDiv = newListItem.querySelector('.flex.gap-2');
+         const textDiv = newListItem.querySelector('.flex.gap-2');
         const currentTitle = textDiv.querySelector('strong').textContent;
         const currentDescription = textDiv.querySelector('p').textContent;
-
+        
         // نمایش فرم ویرایش
         document.getElementById('editFormContainer').classList.remove('hidden');
         document.getElementById('editTitleInput').value = currentTitle;
         document.getElementById('editDescriptionInput').value = currentDescription;
+        
 
         // ذخیره تغییرات
         document.getElementById('saveEditButton').onclick = function() {
@@ -140,3 +165,27 @@ document.getElementById('addTaskButton').addEventListener('click', function() {
     document.querySelectorAll('.importanceButton').forEach(btn => btn.style.backgroundColor = '');
 });
 
+function setLightMode() {
+    document.documentElement.classList.remove('dark');
+    document.getElementById('container').classList.remove('bg-black', 'text-white');
+    document.getElementById('container').classList.add('bg-white', 'text-black');
+    localStorage.setItem('theme', 'light');
+}
+
+function setDarkMode() {
+    document.documentElement.classList.add('dark');
+    document.getElementById('container').classList.remove('bg-white', 'text-black');
+    document.getElementById('container').classList.add('bg-black', 'text-white');
+    localStorage.setItem('theme', 'dark');
+}
+
+function applyStoredTheme() {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'dark') {
+        setDarkMode();
+    } else {
+        setLightMode();
+    }
+}
+
+applyStoredTheme();

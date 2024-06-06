@@ -3,8 +3,7 @@
     src: url(./asset/font/Yekan.ttf) format("truetype");
 }
 .body{
-    font-family: Yekan;
-    direction: rtl;
+    font-family: Yekan;    
     text-align: right;
 }
 .sidebar {
@@ -37,24 +36,20 @@
   }
 
   
-ul{
-  direction: rtl;
+ul{  
   text-align: right;
 }
-.high {
-  direction: rtl;
+.high {  
   border-right: 5px solid red;
   list-style-type: none;
 }
 
-.medium {
-  direction: rtl;
+.medium {  
   border-right: 5px solid yellow;
   list-style-type: none;
 }
 
-.low {
-  direction: rtl;
+.low {  
   border-right: 5px solid green;
   list-style-type: none;
 }
@@ -62,6 +57,10 @@ ul{
 .hidden {
   display: none;
   list-style-type: none;
+}
+.hiddenTags{
+  display: none;
+  position: absolute;
 }
 
 
