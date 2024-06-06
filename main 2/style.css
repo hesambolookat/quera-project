@@ -41,37 +41,37 @@ ul{
 }
 
 .high {  
-  border-right: 5px solid red;
+  border-right: 5px solid #FF5F37;
   list-style-type: none;
 }
 
 .medium {  
-  border-right: 5px solid yellow;
+  border-right: 5px solid #FFAF37;
   list-style-type: none;
 }
 
 .low {  
-  border-right: 5px solid green;
+  border-right: 5px solid #11A483;
   list-style-type: none;
 }
 
 .high-bg { 
-  color:red;
+  color:#FF5F37;
   background-color: #E9E9E9;
 }
 
 .medium-bg {  
-  color: yellow;
+  color: #FFAF37;
   background-color: #E9E9E9;
 }
 
 .low-bg {  
-  color: green;
+  color: #11A483;
   background-color: #E9E9E9;
 }
 
 .hidden {
-  display: nyellow;
+  display: none;
   list-style-type: none;
 }
 .hiddenTags{
