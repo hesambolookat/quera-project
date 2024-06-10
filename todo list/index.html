@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fa" class="" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صفحه اصلی (پروژه پایانی)</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        darkMode: "class"
+      };
+    </script>
+  </head>
+  <body id="container" class="body m-0 box-border duration-300 dark:bg-[#060c18] dark:text-white">
+    <header id="main" class="sidebar-closed shadow-lg lg:hidden block border">
+      <div class="lg:px-20 px-4 flex justify-between items-center py-4">
+        <button class="openBtn" onclick="toggleSidebar()">☰</button>
+        <div class="flex justify-center cursor-pointer">
+          <div class="flex items-center lg:gap-12">
+            <a
+              href="#"
+              class="font-semibold text-center lg:hover:text-[#2C7EF8] lg:text-[20px]"
+              >کوئرا لیست
+            </a>
+          </div>
+        </div>
+        <img class="invisible" src="./asset/menu.png" alt="menu" />
+      </div>
+    </header>
+    <aside
+      id="sidebar"
+      class="sidebar  bg-white dark:bg-[#060c18] dark:text-white z-10 lg:w-[20%] text-center gap-4 lg:right-0 overflow-hidden shadow-lg lg:m-4 p-4 border lg:rounded-lg"
+    >
+      <div class="lg:hidden flex justify-between my-4 items-center">
+        <a
+          href="#"
+          class="font-semibold px-2 text-center hover:text-[#2C7EF8] text-[18px]"
+          >کوئرا لیست</a
+        >
+
+        <button class="closeBtn" onclick="toggleSidebar()">
+          <img src="./asset/Frame 12161.png" alt="cancel" />
+        </button>
+      </div>
+      <div
+        class="lg:flex cursor-pointer transition-all duration-300 my-4 hidden"
+      >
+        <img src="./asset/Ellipse 136.png" alt="profile" />
+        <div class="gap-2">
+          <h1 class="font-extrabold text-[18px]">سلام،رویا</h1>
+         <div id="date-time"></div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col cursor-pointer  transition-all lg:gap-4 my-10 mx-2"
+      >
+        <div class="flex gap-2 hover:text-[#2C7EF8] active:bg-[#E9E9E9]">
+          <img alt="home" src="./asset/icon/home.png"/>          
+          <p class="font-bold text-[16px] hover:text-[#007BFF]">
+            خانه
+          </p>
+        </div>
+        <div
+          class="flex gap-2 hover:text-[#2C7EF8] active:bg-[#E9E9E9] transition-all duration-300"
+        >
+        <img alt="task" src="./asset/icon/tasks.png"/>          
+        <p class="font-bold text-[16px] hover:text-[#007BFF]">
+            تسک ها
+          </p>
+        </div>
+        <div
+          class="flex gap-2 hover:text-[#2C7EF8] active:bg-[#E9E9E9] transition-all duration-300"
+        >
+        <img alt="calender" src="./asset/icon/calender.png"/>
+        <p class="font-bold text-[16px] hover:text-[#007BFF]">
+            تقویم
+        </p>
+        </div>
+        <div
+          class="flex gap-2 hover:text-[#2C7EF8] active:bg-[#E9E9E9] transition-all duration-300"
+        >
+        <img alt="report" src="./asset/icon/report.png"/>          
+        <p class="font-bold text-[16px] hover:text-[#007BFF]">
+            گزارشات
+          </p>
+        </div>
+        <div
+          class="flex gap-2 hover:text-[#2C7EF8] active:bg-[#E9E9E9] transition-all duration-300"
+        >
+        <img alt="settings" src="./asset/icon/sttings.png"/> 
+        <p class="font-bold text-[16px] hover:text-[#007BFF]">
+            تنظیمات
+          </p>
+        </div>
+        <div
+          class="flex gap-2 hover:text-[#2C7EF8] active:bg-[#E9E9E9] transition-all duration-300"
+        >
+        <img alt="support" src="./asset/icon/support.png"/>
+       <p class="font-bold text-[16px] hover:text-[#007BFF]">
+            پشتیبانی
+          </p>
+        </div>
+        <div
+          class="flex gap-2 hover:text-[#2C7EF8] active:bg-[#E9E9E9] transition-all duration-300"
+        >
+        <img alt="profile" src="./asset/icon/profile.png"/>          
+        <p class="font-bold text-[16px] hover:text-[#007BFF]">
+            پروفایل
+          </p>
+        </div>
+      </div>
+      <div
+        id="btn"
+        class=" flex my-10  dark:bg-[#060c18] dark:text-white transition-all duration-300"
+      >
+      <button
+        id="icon-sun" 
+        onclick="setLightMode()"
+        class="theme-toggle w-[50%] py-2 my-3 border dark:bg-[#060c18] dark:hover:bg-[#007BFF] dark:text-white border-gray-300 hover:bg-gray-300 rounded-md flex items-center justify-center gap-1"
+            >
+        <img alt="light" src="./asset/icon/sun.png"/>  
+        روشن
+        </button>
+
+
+        <button
+          id="icon-moon"
+          onclick="setDarkMode()"
+          class="theme-toggle w-[50%] py-2 my-3 dark:bg-[#060c18] dark:hover:bg-[#007BFF] dark:text-white border border-gray-300 hover:bg-gray-300 rounded-md flex items-center justify-center gap-1"
+        >
+        <img alt="dark" src="./asset/icon/download.png"/>  
+        تاریک
+        </button>
+      </div>
+      <hr />
+      <div class="flex transition-all duration-300">
+        <img src="./asset/logout.png" alt="exit" />
+        <p
+          class="font-bold text-[16px] hover:text-[#007BFF] active:bg-[#E9E9E9]"
+        >
+          خروج
+        </p>
+      </div>
+    </aside>
+    <main class="md:mr-[20%]">
+      <div
+        class="flex flex-col justify-center lg:py-14 gap-8 lg:mx-20"
+      >
+        <div class="flex gap-2 my-2 lg:hidden">
+          <img
+            src="./asset/Ellipse 136.jpg"
+            class="w-[56px] h-[56px]"
+            alt="profile"
+          />
+          <div class="flex flex-col">
+            <h1 class="font-extrabold text-[18px]">سلام،رویا</h1>
+            <div id="date-time"></div>
+          </div>
+        </div>
+        <div class="flex flex-col items-start gap-2">
+          <h2 class="font-extrabold text-[20px] lg:mx-40">
+            تسک های امروز
+          </h2>
+          <p class="font-normal text-[14] lg:mx-40">
+            تسکی برای امروز نداری
+          </p>
+        </div>
+        <div
+          class="head-box flex border lg:mx-40 rounded-xl md:w-auto border-dashed border-[#CCCCCC] p-[16px] gap-4 lg:gap-3"
+        >
+          <button id="add-task-button" class="flex">
+            <img class="cursor-pointer" src="./asset/add.png" alt="add" />
+            <a href="#">افزودن تسک های جدید</a>
+          </button>
+        </div>
+        <div
+          id="popUpForm"
+          class="form-popup hidden border rounded-xl md:w-auto border-[#E9E9E9] py-2 lg:mx-40 px-2"
+        >
+          <div class="flex flex-col gap-6 px-4 ">
+            <div class="">
+              <form id="toDoForm" class="form-container gap-6">
+                <input
+                  type="text"
+                  id="toDoTitleInput"
+                  placeholder="نام تسک"
+                  class="w-full mt-2 p-2 dark:bg-[#060c18] outline-none"
+                  required
+                />
+                <textarea
+                  id="toDoDescriptionInput"
+                  name="task"
+                  class="border-none resize-none rounded-lg dark:bg-[#060c18]  outline-none w-full mt-2 p-2"
+                  rows="2"
+                  required
+                  placeholder="توضیحات"
+                ></textarea>
+                <div
+                  id="tagButton"
+                  class="flex text-[12px] cursor-pointer justify-center w-[50px] border rounded-md dark:bg-[#060c18] dark:hover:bg-[#E9E9E9] dark:hover:text-[#060c18] dark:text-white  border-[#E9E9E9] bg-[#E9E9E9] text-[#AFAEB2]"
+                >
+                  <img src="./asset/tag.png" alt="tag" />
+                  <button   type="button">تگ ها</button>
+                </div>
+                <div id="tagMenu" class="hiddenTags gap-6 ">
+                  <div
+                    id="importanceButtons"
+                    class=" flex justify-between items-center border w-[213px] border-[#C3FFF1] rounded-lg p-2 gap-2"
+                  >
+                    <button
+                      type="button"
+                      data-importance="high"
+                      class="importanceButton font-semibold text-[12px] border rounded-md border-[#E9E9E9] dark:bg-[#060c18] dark:hover:bg-[#E9E9E9] bg-[#E9E9E9] text-[#FF5F37] w-11"
+                    >
+                     بالا
+                    </button>
+                    <img src="./asset/Line 485.png" alt="line" />
+                    <button
+                      type="button"
+                      data-importance="medium"
+                      class="importanceButton font-semibold text-[12px] border rounded-md border-[#E9E9E9] dark:bg-[#060c18] dark:hover:bg-[#E9E9E9] bg-[#E9E9E9] text-[#FFAF37] w-14"
+                    >
+                    متوسط
+                  </button>
+                  <img src="./asset/Line 485.png" alt="line" />
+                  <button
+                    type="button"
+                    data-importance="low"
+                    class="importanceButton font-bold text-[12px] border rounded-md border-[#E9E9E9] dark:bg-[#060c18] dark:hover:bg-[#E9E9E9] bg-[#E9E9E9] text-[#11A483] w-14"
+                  >
+                    پایین
+                  </button>
+                </div> 
+              </div>
+              
+            </div>
+            <div dir="ltr" class="flex gap-2 border-t border-dotted mt-5">
+              <button
+                id="addTaskButton"
+                class="lg:w-[136px] w-[121px] border-y-[8px] my-2 border-solid text-white border-[#2C7EF8] bg-[#2C7EF8] text-center rounded-lg"
+              >
+                اضافه کردن تسک
+              </button>
+              <button
+                id="closeFormBtn"
+                class=" w-[34px] border border-[#E9E9E9] my-2 dark:bg-[#060c18] dark:hover:bg-[#E9E9E9]  bg-[#E9E9E9] rounded-md p-2"
+              >
+                <img src="./asset/Frame 12161.png" alt="cancel" />
+              </button>
+            </form>
+            </div>
+          </div>
+        </div>
+        <ul id="toDoList" class="flex flex-col items-center gap-4 lg:mx-40"></ul>
+        <div
+          id="editFormContainer" 
+          class="hidden border rounded-xl  md:w-auto py-2 lg:mx-40 px-2"
+        >
+          <div class="flex flex-col gap-6 px-4">
+            <div class="">
+              <form id="editForm" class="flex flex-col">
+                <input type="text" id="editTitleInput" class="w-full dark:bg-[#060c18]  mt-2 p-2 outline-none" placeholder="نام تسک" required >
+                <textarea type="text" id="editDescriptionInput" class="border-none resize-none dark:bg-[#060c18]  rounded-lg outline-none w-full mt-2 p-2"
+                rows="4" placeholder="توضیحات " required></textarea>
+                <div dir="ltr" class="flex gap-2">
+                  <button
+                  id="saveEditButton"  
+                  class="lg:w-[136px] w-[121px]  text-white border-[#2C7EF8] bg-[#2C7EF8] text-center rounded-lg"
+                  >
+                    ویرایش تسک
+                  </button>
+                  <button
+                  id="cancelEditButton"
+                  class="w-[34px] border border-[#E9E9E9]  dark:bg-[#060c18] dark:hover:bg-[#E9E9E9]  bg-[#E9E9E9] rounded-md p-2"
+                  >
+                  <img src="./asset/Frame 12161.png" alt="cancel" />
+                  </button>
+                </div>
+        
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div
+        class="flex justify-center py-2 lg:mx-40 px-2"
+      >
+        <img
+          src="./asset/Frame 1000005523.png"       
+          alt="description"
+        />
+        </div>
+
+        <div class="flex flex-col items-start gap-2 lg:mx-40">
+          <h2 class="font-extrabold text-[20px]">
+            تسک های انجام شده
+          </h2>
+          <p id="completedCount">تعداد تسک‌های انجام شده: 0</p>          
+        </div>
+        <ul id="completedList" class="flex flex-col gap-4 items-center lg:mx-40"></ul>
+      </div>
+    </main>
+  </body>
+</html>

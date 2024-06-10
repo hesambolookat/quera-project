@@ -1,0 +1,222 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav_logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px ;
+    margin-bottom:25px;
+    margin-left: 50px;
+
+}
+
+.nav_logo img{
+    width:35px;
+}
+
+.header_navTitle{
+    color:white;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+
+.header_nav{
+    background-color: #343A40;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header_navForm{
+    border:1px;
+    border-style: hidden;
+    border-radius: 8px;
+    display: flex;
+    height: 40px;
+}
+
+
+.navForm_search{
+  width: 530px; 
+  border-radius: 4px;
+ 
+}
+
+
+.navForm_btn{
+    background: #EB6F4C;
+    border-right:none;
+    width: 70px;
+    border-radius: 5px;  
+    cursor: pointer;
+    outline: none;
+
+}
+
+.header_NavDegreeBtn{
+    border:1px ;
+    border-style: hidden;
+    border-radius: 5px;
+    outline: none;
+    background: white;
+    padding: 5px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.header_NavDegreeBtn:hover{
+    background-color: #343A40;
+    color: #676f79;
+
+}
+
+
+.header_DarkModeBtn:hover{
+    background-color: #343A40;
+
+}
+
+.header_DarkModeBtn{
+    border:1px ;
+    border-style: hidden;
+    border-radius: 5px;
+    outline: none;
+    background: white;;
+    margin-right: 40px; 
+    padding: 5px;
+    cursor: pointer;    
+}
+
+.degree{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.degree_City{
+    font-family: Roboto,sans-serif;
+    margin-top: 60px;
+ 
+}
+
+.degree_City h2{
+    font-weight: 400;
+    font-size:32px ;
+    color: #343A40;
+}
+
+.degree_City h3{
+    font-weight: 400;
+    font-size:16px ;
+    color: #343A40;
+    
+}
+
+.degree_City p{
+    font-weight: 500;
+    font-size:96px ;
+    color: #343A40;
+}
+
+.degree_detail{
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto,sans-serif;
+
+}
+
+.degree_detail h2{
+    font-weight: 400;
+    font-size: 32px;
+    text-align: center;
+}
+
+.degree_detail p{
+    font-weight: 400;
+    font-size: 32px;
+    text-align: center;
+}
+
+.detail{
+    display: flex;
+    justify-content: space-around;
+    font-family: Roboto,sans-serif;
+    background-color: #343A40;
+    color: white;    
+}
+
+.detail_Chance{
+    padding: 25px;
+    align-items: center;
+}
+
+.detail_Chance h3{
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffffc9;
+}
+
+.detail_Chance p{
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.detail h2{
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 20px;
+}
+
+.grid{
+    margin: 20px;
+    text-align: center;
+    padding: 50px;
+    width: 100%;
+    gap: 20px;
+    border-collapse: collapse;
+}
+
+.grid tr{
+    border-bottom: 1pt solid black;
+
+}
+
+.grid td{
+    padding: 15px 15px;
+}
+@media only screen and (max-width: 600px) {
+    .header_navTitle{
+        font-size: 15px;
+    }
+    .nav_logo{
+        margin-left: 25px;
+    }
+    .header_navForm{
+        width:200px ;
+        height: 30px;
+    }
+    .header_NavDegreeBtn{
+        border:1px ;
+        border-style: hidden;
+        border-radius: 5px;
+        outline: none;
+        background: white;
+        padding: 5px;
+        width: 60px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    
+  }

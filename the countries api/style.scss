@@ -1,0 +1,122 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    background-color: #202d36;
+}
+.header_navTitle{
+    font-weight: 700;
+    font-size: x-large;
+    color:white;
+    margin: 20px 50px;
+}
+.nav_darkMod{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    margin: 0 40px;
+    border: none;
+    outline:none;
+    font-weight: 600;
+    color: white;
+    background: #2b3743;
+}
+.header_nav{
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    background-color: #2b3743;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.header_navForm{
+    display: inline-flex;
+    background-color: #2b3743;
+    border: #2b3743;
+    width: 400px;
+    height: 50px;
+    border-style: dashed;
+    border-radius: 8px;
+    margin: 20px 50px;
+    gap: 20px;
+}
+.navForm_btn{
+    background-color: #2b3743;
+    border: none;
+    outline:none;
+
+}
+.navForm_search{
+    width: 100%;
+    color: white;
+    background-color: #2b3743;
+    border: none;
+    outline:none;
+}
+.main_Filter{
+    display: flex;
+    justify-content: space-between;
+}
+.dropdown{
+    position: relative;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+.dropdownForm{
+    background-color: #2b3743;
+    border: #2b3743;
+    text-align: center;
+    border-style: dashed;
+    border-radius: 8px;
+    margin: 20px 50px;
+    display: flex;
+    padding: 15px;
+}
+.dropdownInput{
+    background-color: #2b3743;
+    border: none;
+    outline:none;
+    color: white;
+
+}
+.dropdownButton{
+    background-color: #2b3743;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    
+}
+.dropdownButton:hover{
+    background-color: #242e38;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 25%;
+    top: 80%;
+    background-color: #2b3743;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: #2b3743;
+    border-radius: 8px;
+}
+
+.dropdown-content a {
+    color: white;
+    background-color: #2b3743;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.show{
+    display: block;
+}

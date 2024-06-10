@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="header_nav">
+            <div class="nav_logo">
+                <h1 class="header_navTitle">where in the world</h1>
+             </div>
+            
+            <button class="nav_darkMod"> <img src="./asset/icon/moon-regular-24 (1).png" alt="dark"> Dark Mode</button>
+
+        </nav>
+    </header>
+    <main>
+        <div class="main_Filter">
+            <form class="header_navForm">
+                <button class="navForm_btn"><img src="./asset/icon/search-regular-24.png" alt="search"></button>
+                <input class="navForm_search" type="search" placeholder="search for a country">
+            </form>
+            
+            <div class="dropdown">
+                <div class="dropdownForm">
+                    <input type="text" class="dropdownInput" placeholder="Filter by Region" id="dropdownInput" readonly>
+                    <button type="button" class="dropdownButton" id="dropdownButton"><img width="15px" src="./asset/icon/chevron-down-solid-24.png" alt=""></button>
+                </div>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="#" onclick="selectItem('Africa')">Africa</a>
+                    <a href="#" onclick="selectItem('America')">America</a>
+                    <a href="#" onclick="selectItem('Asia')">Asia</a>
+                    <a href="#" onclick="selectItem('Europe')">Europe</a>
+                    <a href="#" onclick="selectItem('Oceania')">Oceania</a>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
